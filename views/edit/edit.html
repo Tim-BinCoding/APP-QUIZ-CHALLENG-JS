@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script defer src="edit.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="../../index.html"><img src="../../img/logo.png" /></a>
+        <h2>Quiz App</h2>
+      </ul>
+      <ul>
+        <li class="active"><a href="edit.html">Edit quiz</a></li>
+        <li><a href="../play/play.html">Play quiz</a></li>
+      </ul>
+    </nav>
+
+    <div id="questions-dialog" style="display: none">
+      <dialog open>
+        <header>Create new question</header>
+
+        <section>
+          <label>Title</label>
+          <input id="title" type="text" placeholder="Question title" />
+
+          <label>Answers</label>
+          <div class="groupAnswers"> 
+            <input id="choiceA" type="text" placeholder="Answer A" />
+            <input type="radio" class="radio" name='answer' value="A">
+          </div>
+          <div class="groupAnswers">
+            <input id="choiceB" type="text" placeholder="Answer B" />
+            <input type="radio" class="radio" name='answer' value="B">
+          </div>
+          <div class="groupAnswers">   
+            <input id="choiceC" type="text" placeholder="Answer C" />
+            <input type="radio" class="radio" name='answer' value="C">
+          </div>
+          <div class="groupAnswers">
+            <input id="choiceD" type="text" placeholder="Answer D" />
+            <input type="radio" class="radio" name='answer' value="D">
+          </div>
+        </section>
+        <!-- <select name="ChoseAnswer" id="Select-Answers">
+          <option value="answers" spellcheck="false">Answers</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select> -->
+
+        <menu>
+          <button onclick="onCancel()">Cancel</button>
+          <button id="createEditButton" onclick="onCreate()">Create</button>
+        </menu>
+      </dialog>
+    </div>
+
+    <div id="questions-view">
+      <button onclick="onAddQuestion()">Add question</button>
+      <div id="questions-container">
+        <!-- <div class="card">
+
+          <div class="card_body">
+            <div class="questionInfos">
+              <span class="title">Title</span>
+            </div>
+            <div class="actions">Btn</div>
+          </div>
+
+          <div class="card_footer">
+            <span class="showAnswer goodAnswer">A</span>
+            <span class="showAnswer">B</span>
+            <span class="showAnswer">C</span>
+            <span class="showAnswer">D</span>
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+  </body>
+</html>
